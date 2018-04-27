@@ -113,7 +113,7 @@ def snips_reader(file='train', dataset_download_path='ontonotes/', return_intent
             test_sentences_with_classes[-1] += tmp[1::2]
 
     if file == 'train.txt':
-        n_episodes = 10
+        n_episodes = 5000
         for _ in range(n_episodes):
             i_class = np.random.choice(len(train_sentences_with_classes))
             support_sentences = np.random.choice(train_sentences_with_classes[i_class], train_sentences, False).tolist()
